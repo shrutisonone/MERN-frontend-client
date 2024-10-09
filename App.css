@@ -1,0 +1,98 @@
+/* Color Palette */
+:root {
+    --primary-color: #564787;
+    --secondary-color: #9AD4D6;
+    --background-color: #F2FDFF;
+    --accent-color: #DBCBD8;
+    --dark-color: #101935;
+    --white-color: #FFFFFF;
+    --light-gray: #f4f4f9;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;  /* Switched to Roboto for better readability */
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;  /* Improved readability */
+}
+
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: var(--dark-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+select, input[type="text"] {
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    width: calc(100% - 42px); /* Adjust width for padding and margins */
+    max-width: 350px; /* Slightly increased max-width for better usability */
+    font-size: 1em;  /* Increased font size for readability */
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(86, 71, 135, 0.3);
+    outline: none;
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--white-color);
+}
+
+th, td {
+    padding: 16px;  /* Increased padding for better readability */
+    text-align: left;
+    border-bottom: 1px solid var(--accent-color);
+    color: var(--dark-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+tr:hover {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .App {
+        padding: 15px;
+    }
+    select, input[type="text"] {
+        width: calc(100% - 20px);
+    }
+}
